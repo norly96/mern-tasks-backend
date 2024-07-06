@@ -6,7 +6,7 @@ import cookieParser from "cookie-parser"
 
 const app = express()
 app.use(morgan('dev'))
-app.use(express.json()) //Lea los objetos JSON
+app.use(express.json()) //Read the objects JSON
 app.use(cookieParser())
 
 app.use("/api",authRoutes)
