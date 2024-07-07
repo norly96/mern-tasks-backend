@@ -24,7 +24,7 @@ Follow these steps to install and set up the project on your local machine.
 2. Navigate to the project directory:
 
 ```bash
-   cd your-repository
+   cd mern-tasks-backend
 ```
 
 3. Install the dependencies:
