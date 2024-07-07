@@ -74,7 +74,5 @@ export const profile = async (req, res) => {
             email: userFound.email,
             createdAt: userFound.createdAt,
             updatedAt: userFound.updatedAt
-        })
-    console.log(req.user);
-    return res.send("Profile")
+        })    
 }

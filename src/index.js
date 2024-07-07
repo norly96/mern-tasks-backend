@@ -1,8 +1,9 @@
 import app from "./app.js"
 import { connectDB } from "./db.js"
 import swaggerDocs from "./swagger.js"
+import "dotenv/config"
 
-const port = 3002
+const port = process.env.PORT || 3002
 const V1SwaggerDocs = swaggerDocs
 
 connectDB();
