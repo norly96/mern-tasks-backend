@@ -13,7 +13,6 @@ const options = {
                 name: "Norluis Galvez Sanchez",
                 url: "https://www.norly96.com"
             },
-            servers: ["http:localhost:3002"]
         }
     },
     apis: ["src/routes/auth.routes.js","src/routes/tasks.routes.js"]
