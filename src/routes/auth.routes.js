@@ -3,6 +3,7 @@ import { register, login, logout, profile} from "../controllers/auth.controller.
 import { authRequired } from "../middlewares/validateToken.js";
 import { loginSchema, registerSchema } from "../schemas/auth.schema.js";
 import { validateSchema } from "../middlewares/validator.middleware.js";
+import { verifyToken } from "../controllers/auth.controller.js";
 
 const router = Router()
 
@@ -162,6 +163,8 @@ router.post('/login', validateSchema(loginSchema) ,login)
 */
 
 router.post('/logout', logout)
+
+router.get("/verify-token", verifyToken)
 
 /**
  * @swagger
