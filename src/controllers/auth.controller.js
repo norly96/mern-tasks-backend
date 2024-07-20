@@ -85,8 +85,9 @@ export const profile = async (req, res) => {
 }
 
 
-export const verifyToken = async (req,res) => {
-    const { token } = req.cookies
+export const verifyToken = async (req,res) => {   
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.startsWith('Bearer ') ? authHeader.substring(7) : null;
 
     if(!token) return res.status(401).json({message: ["Unauthorized"]})
 
